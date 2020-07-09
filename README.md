@@ -2,7 +2,7 @@
 
 An animation image view implementation using `NSView` and  `CAKeyframeAnimation`.
 
-![Screenshot](screenshot)
+![Screenshot](screenshot.png)
 
 ## License
 
