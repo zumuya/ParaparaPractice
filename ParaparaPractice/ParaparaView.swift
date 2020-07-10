@@ -58,6 +58,7 @@ class ParaparaView: NSView
 	
 	//MARK: - Drawing
 	
+	override var isFlipped: Bool { true }
 	override var wantsUpdateLayer: Bool { true }
 	
 	override func updateLayer()

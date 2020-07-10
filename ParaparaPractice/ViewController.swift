@@ -18,7 +18,6 @@ class ViewController: NSViewController
 
 		paraparaView.images = (0..<5)
 			.map { NSImage(named: "cat\($0)")! }
-			.reversed()
 		
 		paraparaView.bind(.init(#keyPath(ParaparaView.speed)), to: self, withKeyPath: #keyPath(speed), options: nil)
 	}
