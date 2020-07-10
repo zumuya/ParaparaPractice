@@ -46,8 +46,7 @@ class ViewController: NSViewController
 		return observe(keyPath) { [weak self] observing, change in
 			guard let self = self else { return }
 			
-			let value = self[keyPath: keyPath]
-			self.paraparaView[keyPath: paraparaKeyPath] = value
+			self.paraparaView[keyPath: paraparaKeyPath] = self[keyPath: keyPath]
 		}
 	}
 	func bindParaparaView<Value, RawValue>(_ paraparaKeyPath: WritableKeyPath<ParaparaView, Value>, to keyPath: KeyPath<ViewController, RawValue>) -> Any where Value: RawRepresentable, Value.RawValue == RawValue
