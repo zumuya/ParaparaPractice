@@ -707,27 +707,69 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ParaparaPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="344" height="165"/>
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="200"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="PRu-2A-ruG" customClass="ParaparaView" customModule="ParaparaPractice" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="46" width="344" height="99"/>
+                                <rect key="frame" x="0.0" y="75" width="344" height="105"/>
                             </customView>
                             <gridView xPlacement="leading" yPlacement="center" rowAlignment="none" rowSpacing="8" columnSpacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="goh-gm-xjP">
-                                <rect key="frame" x="47" y="20" width="250" height="18"/>
+                                <rect key="frame" x="43" y="20" width="258" height="47"/>
                                 <rows>
+                                    <gridRow id="6zm-hl-I0b"/>
                                     <gridRow id="6Us-BB-Sgz"/>
                                 </rows>
                                 <columns>
-                                    <gridColumn id="hTe-qU-CJg"/>
-                                    <gridColumn id="npB-rY-pO4"/>
+                                    <gridColumn xPlacement="trailing" id="hTe-qU-CJg"/>
+                                    <gridColumn xPlacement="fill" id="npB-rY-pO4"/>
                                     <gridColumn id="wr3-c7-mEq"/>
                                     <gridColumn id="fTb-HU-8XH"/>
                                 </columns>
                                 <gridCells>
+                                    <gridCell row="6zm-hl-I0b" column="hTe-qU-CJg" id="jj9-YZ-1Co">
+                                        <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KBv-th-SF4">
+                                            <rect key="frame" x="-2" y="29" width="55" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Method:" id="iT5-hV-k85">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </gridCell>
+                                    <gridCell row="6zm-hl-I0b" column="npB-rY-pO4" id="81w-K6-flh">
+                                        <popUpButton key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4zK-gf-DxK">
+                                            <rect key="frame" x="57" y="23" width="105" height="25"/>
+                                            <popUpButtonCell key="cell" type="push" title="Images" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="jUj-dG-5ZE" id="egF-RX-Yx0">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                                <menu key="menu" id="V6S-0v-O2T">
+                                                    <items>
+                                                        <menuItem title="Images" id="jUj-dG-5ZE"/>
+                                                        <menuItem title="Sprite" id="ZdC-hg-iit"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <binding destination="XfG-lQ-9wD" name="selectedIndex" keyPath="animationMethod" id="kTI-BK-bVY"/>
+                                            </connections>
+                                        </popUpButton>
+                                    </gridCell>
+                                    <gridCell row="6zm-hl-I0b" column="wr3-c7-mEq" headOfMergedCell="un2-4r-8id" id="un2-4r-8id">
+                                        <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XsX-aL-1Kh">
+                                            <rect key="frame" x="165" y="28" width="73" height="18"/>
+                                            <buttonCell key="cell" type="check" title="Discrete" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Zjd-ij-mlB">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="XfG-lQ-9wD" name="value" keyPath="usesDiscreteAnimation" id="Lnp-tB-d2y"/>
+                                            </connections>
+                                        </button>
+                                    </gridCell>
+                                    <gridCell row="6zm-hl-I0b" column="fTb-HU-8XH" headOfMergedCell="un2-4r-8id" id="PYh-d4-llj"/>
                                     <gridCell row="6Us-BB-Sgz" column="hTe-qU-CJg" id="8jK-1d-6O7">
                                         <textField key="contentView" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xWq-UZ-DFo">
-                                            <rect key="frame" x="-2" y="1" width="47" height="16"/>
+                                            <rect key="frame" x="6" y="1" width="47" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Speed:" id="WE8-ff-bX2">
                                                 <font key="font" usesAppearanceFont="YES"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -737,7 +779,7 @@
                                     </gridCell>
                                     <gridCell row="6Us-BB-Sgz" column="npB-rY-pO4" id="gG9-BJ-zUr">
                                         <slider key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9r0-dm-2AO">
-                                            <rect key="frame" x="49" y="0.0" width="104" height="19"/>
+                                            <rect key="frame" x="57" y="0.0" width="104" height="19"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="Cd5-Bc-7u0"/>
                                             </constraints>
@@ -749,7 +791,7 @@
                                     </gridCell>
                                     <gridCell row="6Us-BB-Sgz" column="wr3-c7-mEq" id="Hsx-AW-bS2">
                                         <textField key="contentView" horizontalHuggingPriority="100" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vjb-zf-GDE">
-                                            <rect key="frame" x="157" y="1" width="40" height="16"/>
+                                            <rect key="frame" x="165" y="1" width="40" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="1" id="7jS-5X-pZX">
                                                 <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="percent" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" id="vad-jZ-fHp">
                                                     <integer key="multiplier" value="100"/>
@@ -765,10 +807,10 @@
                                     </gridCell>
                                     <gridCell row="6Us-BB-Sgz" column="fTb-HU-8XH" id="cAf-UE-GbT">
                                         <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dqi-H2-yMK">
-                                            <rect key="frame" x="203" y="-1" width="47" height="19"/>
+                                            <rect key="frame" x="211" y="-1" width="47" height="19"/>
                                             <buttonCell key="cell" type="roundRect" title="Reset" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="h8u-dc-Xtf">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="controlContent"/>
+                                                <font key="font" metaFont="cellTitle"/>
                                             </buttonCell>
                                             <connections>
                                                 <action selector="resetSpeed:" target="rPt-NT-nkU" id="lWh-Br-Ycw"/>
@@ -811,7 +853,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="602.5"/>
+            <point key="canvasLocation" x="7" y="620"/>
         </scene>
     </scenes>
 </document>

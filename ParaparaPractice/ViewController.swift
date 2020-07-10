@@ -22,15 +22,21 @@ class ViewController: NSViewController
 		
 		observings += [
 			bindParaparaView(\.speed, to: \.speed),
+			bindParaparaView(\.animationMethod, to: \.animationMethod),
+			bindParaparaView(\.usesDiscreteAnimation, to: \.usesDiscreteAnimation)
 		]
 	}
 	
-	//MARK: - Speed
+	//MARK: - Bindable Properties
 	
 	@objc dynamic var speed: CGFloat = 1.0
 	
 	@objc class var keyPathsForValuesAffectingIsSpeedDefault: Set<String> { [#keyPath(speed)] }
 	@objc dynamic var isSpeedDefault: Bool { (speed == 1.0) }
+	
+	@objc public var usesDiscreteAnimation = true
+	
+	@objc dynamic var animationMethod = 0
 	
 	//MARK: - Actions
 	
